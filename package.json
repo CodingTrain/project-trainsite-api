@@ -58,5 +58,9 @@
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "graphql-yoga": "^1.16.9",
+    "reflect-metadata": "^0.1.12",
+    "type-graphql": "^0.16.0"
+  }
 }
