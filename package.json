@@ -59,7 +59,7 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
-    "graphql-yoga": "^1.17.4",
+    "graphql-yoga": "^1.18.1",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.4"
   }
