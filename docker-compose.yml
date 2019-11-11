@@ -1,0 +1,24 @@
+#
+# Project TrainSite API
+#
+# This file currently only starts up a mongodb database instance.
+# For now, you have tu start up the keystone app manually using `yarn dev`
+# *AFTER* you have a database up and running.
+#
+# TODO: Setup the actual keystone app to use Docker as shown here:
+#       https://www.keystonejs.com/guides/deployment
+#
+
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  mongodb: {}

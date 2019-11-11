@@ -1,0 +1,6 @@
+{
+  "useTabs": true,
+  "quoteProps": "consistent",
+  "trailingComma": "es5",
+  "endOfLine": "lf"
+}
