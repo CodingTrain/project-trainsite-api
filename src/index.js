@@ -3,7 +3,7 @@ const { GraphQLApp } = require("@keystonejs/app-graphql");
 const { AdminUIApp } = require("@keystonejs/app-admin-ui");
 const { MongooseAdapter: Adapter } = require("@keystonejs/adapter-mongoose");
 const { PasswordAuthStrategy } = require("@keystonejs/auth-password");
-const createAllTheLists = require("./Lists");
+const { User, CommunityContribution } = require("./schema.js");
 
 const PROJECT_NAME = "codingtrain-api";
 
@@ -17,8 +17,7 @@ const keystone = new Keystone({
 	name: PROJECT_NAME,
 	adapter: new Adapter(),
 	onConnect: async () => {
-		// setup default admin user & dummy data for testing
-		// only if user list is empty
+		// setup default admin user & dummy data for testing, but only if user list is empty
 		const users = await keystone.lists.User.adapter.findAll();
 		if (!users.length) {
 			await keystone.createItems({
@@ -36,9 +35,8 @@ const keystone = new Keystone({
 	},
 });
 
-// there's going to be many lists so I set it up like this,
-// is this ok? (see Lists folder)
-createAllTheLists(keystone);
+keystone.createList("User", User);
+keystone.createList("CommunityContribution", CommunityContribution);
 
 const authStrategy = keystone.createAuthStrategy({
 	type: PasswordAuthStrategy,
