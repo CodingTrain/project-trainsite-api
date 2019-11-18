@@ -1576,6 +1576,14 @@
     serialize-error "^3.0.0"
     stack-utils "^1.0.2"
 
+"@keystonejs/auth-password@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@keystonejs/auth-password/-/auth-password-5.0.0.tgz#ada37104729e9589b9b51615070ff4db2158a875"
+  integrity sha512-FCYjvEAPH49RNCH7AuAmHUkoK8VCZRJm6Gqza8YjTAijk9+6Af0updhxLRp9VYhnHSrsfihMP+jTso61dvGDuw==
+  dependencies:
+    "@keystonejs/fields" "^5.0.0"
+    "@keystonejs/session" "^5.0.0"
+
 "@keystonejs/build-field-types@^5.0.0", "@keystonejs/build-field-types@^5.0.1", "@keystonejs/build-field-types@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@keystonejs/build-field-types/-/build-field-types-5.1.0.tgz#7020796fdb16752b2f5bc973b66c8e15554e2ac1"
